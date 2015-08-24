@@ -21,13 +21,11 @@ nav {
 }
 
 img {
-    display:inline;
-    /*position: relative;
-    left: 250px;*/
-    float:right;
+    position:relative;
+    left:350px;
 }
 
 article {
      color: #00002E;
-     margin:20px;
+     margin:100px;
 }

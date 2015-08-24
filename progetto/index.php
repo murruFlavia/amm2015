@@ -9,7 +9,7 @@ http://localhost/amm2015/progetto/index.php
     <head>
         <meta charset="UTF-8">
         <title>Cinema Pasolini - Home</title>
-        <link rel="stylesheet" type="text/css" href="css_ind.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
         <h1>Cinema Pasolini</h1>
@@ -20,7 +20,7 @@ http://localhost/amm2015/progetto/index.php
                 <li><b>Prenota online</b></li>
             </ul>
         </nav>
-        <img title="cinema" alt="Foto del cinema" src="Cinema.jpg" height="500" width="800">
+        <img title="cinema" alt="Foto del cinema" src="Cinema.jpg" height="300" width="600">
         <article>
             <h2>News!</h2>
             <p>Il cinema rimarrà chiuso per ferie dal 12/08 al 20/08.</p>
