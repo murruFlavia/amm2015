@@ -7,11 +7,16 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Cinema Pasolini - Contattaci</title>
+        <?php
+            include('../inc/head.php');
+         ?>
     </head>
     <body>
         <?php
-        // put your code here
+            include ('../inc/header.php'); 
+            include ('../inc/menu.php');          
         ?>
     </body>
+    <?php include ('../inc/footer.php'); ?>
 </html>

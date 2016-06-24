@@ -1,3 +1,7 @@
+<?php
+    include_once 'ViewDescriptor.php';
+?>
+
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -7,11 +11,20 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title><?php $vd->getTitolo() ?></title>
+        <link rel="stylesheet" type="text/css" href="index.css">
     </head>
     <body>
-        <?php
-        // put your code here
+        <div id="logo">
+         <?php
+            $logo = $vd->getLogoFile();
+            require "$logo";
         ?>
+        </div>
+        <?php
+            $menu = $vd->getMenuFile();
+            require "$menu";
+        ?>
+       
     </body>
 </html>
