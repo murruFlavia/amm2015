@@ -9,6 +9,7 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>Cinema Pasolini - Tariffe</title>
         <?php
+            session_start();
             include('../inc/head.php');
          ?>
     </head>

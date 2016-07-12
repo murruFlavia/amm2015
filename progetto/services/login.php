@@ -5,6 +5,28 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
+     <?php
+        session_start();
+        if (isset($_POST['login']))
+        {
+            $_SESSION['loggedIn'] = false;
+            if ( isset($_POST["utente"]) && isset($_POST["password"]))	
+            {	
+                if($_POST["utente"]=="admin" && $_POST["password"]=="flavia")
+                {
+                    $_SESSION['loggedIn']= true;
+                    $_SESSION["level"]="admin";
+                    header('Location: home.php');
+                }
+                else if($_POST["utente"]=="cliente" && $_POST["password"]=="flavia")
+                {                    
+                    $_SESSION['loggedIn']= true;
+                    $_SESSION["level"]="cliente";
+                    header('Location: home.php');
+                }                
+            }
+        }
+    ?>
     <head>
         <meta charset="UTF-8">
         <title>Cinema Pasolini - Login</title>
@@ -27,9 +49,11 @@ and open the template in the editor.
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password"/> 
                 <br/>
-                <input type="submit" name=login value="Login"/>
-        </form>
+                <input type="submit" name=login value="login"/>
+            </form>
         </div>
+        <?php include ('../inc/footer.php'); ?>
     </body>
-    <?php include ('../inc/footer.php'); ?>
+    
+   
 </html>

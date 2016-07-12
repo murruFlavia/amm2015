@@ -8,6 +8,18 @@ and open the template in the editor.
     Author     : amm
 */
 
+html, body, #container
+{ 
+    min-height:100%; 
+    width:100%;
+    height:100%;
+}
+
+html>body, html>body #container
+{
+    height:auto;
+}
+
 body {
     background-color: #D7EBE9;
     font-family: Sans-Serif;
@@ -30,7 +42,7 @@ h1 {
    font-family: "Calibri", Sans-serif;
    font-size: 60px;
    margin: 0px;
-   height: 70px;
+   height: 90px;
 }
 
 #mini_layer
@@ -78,16 +90,6 @@ h1 {
 
  }
 
-img {
-    position:relative;
-    left:350px;
-}
-
-article {
-     color: #00002E;
-     margin:100px;
-}
-
 .box {
     background-color: #67859F;
     border-radius: 20px;
@@ -96,11 +98,26 @@ article {
     font-size: 18px;
     line-height: 30px;
     text-align: center;
-    height: auto;
-    width: 50%;
+    height: 100%;
+    width: 40%;
     margin-left:auto;
     margin-right: auto;
     color: white;
+    display:block;
+}
+
+.image
+{
+    //display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 350px;
+    height: 500px;
+    position:relative;
+    //float:left;
 }
 
 #footer{
@@ -110,9 +127,26 @@ article {
     margin-top: 0px;
     text-align:center;
     font-size: 13px;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
+    top:300px;
+    bottom: 0; 
+    left: 0; 
     display:block;
     height: 50px;
+    clear:both;
 }
 
+table
+{
+    
+    margin-right: auto;
+    margin-left: auto;
+    height: 350px;
+    position:relative;
+}
+
+.messaggi_errore
+{
+    color:red;
+    background-color: black;
+}
