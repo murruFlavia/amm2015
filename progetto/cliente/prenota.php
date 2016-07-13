@@ -56,8 +56,7 @@ and open the template in the editor.
                                 <option value="2016/07/08">08/07/2016</option>
                                 <option value="2016/07/09">09/07/2016</option>
                                 <option value="2016/07/10">10/07/2016</option>
-                                <option value="2016/07/11">11/07/2016</option>
-                                
+                                <option value="2016/07/11">11/07/2016</option>                               
                             </select>
                         </td>
                     </tr>
@@ -72,7 +71,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td><label>Numero Posti</label></td>
-                        <td><input type="number" name="numPosti" id="numPosti" /></td>
+                        <td><input type="number" min=1 max=80 name="numPosti" id="numPosti" /></td>
                     </tr>
                     <tr>
                         <td><input type="submit" name="prenota" value="Prenota" /></td>
@@ -94,7 +93,7 @@ and open the template in the editor.
                 $orario = $_POST['orario'];
                 $num_posti=$_POST['numPosti'];
                 
-                
+                //Controllo che siano stati inseriti tutti i campi
                 if(trim($nome) == '' || trim($cognome) == ''|| trim($film) == ''|| trim($data) == ''|| trim($orario) == ''): ?>
                 
                     <div class="messaggi_errore"> <strong>Errore, devi compilare tutti i campi</strong>  </div>
@@ -105,28 +104,35 @@ and open the template in the editor.
                     
                 <?php if($errore):?>
                 <?php
+                    
+                    //Verifico che esista lo spettacolo con orario, data e film selezionati
                     $query1="SELECT sala FROM Spettacoli WHERE data='$data' AND orario='$orario' and film='$film'";
                     $result1 = mysql_query($query1);
                     
                     if($result1==false|| !mysql_num_rows($result1)):?>
                         <div class="messaggi_errore"><strong>Spettacolo non trovato. Reinserire data e ora</strong></div>;
-                    <?php else: ?>
+                    <?php else: //se lo spettacolo esiste, verifico se ci sono posti liberi e inserisco la prenotazione nel database ?> 
                         <?php
                             $sala=mysql_result($result1, 0);
-                            $query = "INSERT INTO Prenotazioni (nome, cognome, sala, data, orario, n_prenotati) 
-                            VALUES ('$nome','$cognome', '$sala', '$data', '$orario', '$num_posti')";
-                            $result = mysql_query($query);
-                            if($result):?>
-                                <div class="messaggi"><strong>Prenotazione avvenuta correttamente</strong></div>
-                            <?php else: ?>
-                                <div class="messaggi_errore"><strong>Inserimento non eseguito <?php mysql_error();?></strong><br> </div>;
-                            <?php endif; ?>
-                        
+                            
+                            if (verificaPosti($sala, $data, $orario, $num_posti)): //se ci sono posti liberi inserisco la prenotazione nel db?>                           
+                                <?php $query = "INSERT INTO Prenotazioni (nome, cognome, sala, data, orario, n_prenotati) 
+                                VALUES ('$nome','$cognome', '$sala', '$data', '$orario', '$num_posti')";
+                                $result = mysql_query($query);
+                                if($result):?>
+                                    <div class="messaggi"><strong>Prenotazione avvenuta correttamente</strong></div>
+                                <?php else: ?>
+                                    <div class="messaggi_errore"><strong>Inserimento non eseguito <?php mysql_error();?></strong><br> </div>
+                                <?php endif; 
+                            else: ?>
+                                <?php ?>
+                                    <div class="messaggi_errore"><strong>Posti liberi insufficienti</strong><br> </div>
+                            <?php endif;?>
                     <?php endif; ?>
                                 
                 <?php endif;?>
                                 
-                <?php  mysql_close();/*chiudo la connessione*/?>
+                <?php  mysql_close();?>
                     
             <?php endif;?>
                                 
@@ -137,6 +143,35 @@ and open the template in the editor.
         <?php include ('../inc/footer.php'); ?>
     </body>
     
+    
 </html>
+
+<?php
+    function verificaPosti($sala, $data, $orario, $num_posti)
+    {
+        $query = "SELECT SUM(n_prenotati) from Prenotazioni WHERE sala='$sala' AND data='$data' AND orario='$orario'";
+        $result = mysql_query($query);
+        if(!$result || !mysql_num_rows($result))
+        {
+            $posti_occupati;
+        }
+        else
+        {
+            $posti_occupati=mysql_result($result, 0);
+        }
+        
+        $query = "SELECT posti FROM Sale where nome='$sala'";
+        $result = mysql_query($query);
+        $posti_totali=mysql_result($result, 0);
+        $posti_liberi=$posti_totali-$posti_occupati;
+        if ($posti_liberi-$posti_occupati<$num_posti)
+        {
+            return false;
+        }
+        return true;
+        
+    }
+    
+?>
 
 

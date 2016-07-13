@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
      <?php
         session_start();
-        if (isset($_POST['login']))
+        if (isset($_POST['Login']))
         {
             $_SESSION['loggedIn'] = false;
             if ( isset($_POST["utente"]) && isset($_POST["password"]))	
@@ -49,7 +49,7 @@ and open the template in the editor.
                 <label for="password">Password</label>
                 <input type="password" name="password" id="password"/> 
                 <br/>
-                <input type="submit" name=login value="login"/>
+                <input type="submit" name=Login value="Login"/>
             </form>
         </div>
         <?php include ('../inc/footer.php'); ?>

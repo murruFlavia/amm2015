@@ -20,14 +20,18 @@ and open the template in the editor.
         ?>
         <div class=box>
             <h2>Chi Siamo</h2>
-            <p> Il Cinema Pasolini è un Cineclub privato, nato nel 1998 dalla passione per l'arte del suo fondatore Mario Rossi.
-                <br/>
-                Dispone di due ampie Sale: Kubrick e Tarantino, entrambe di 80 posti e climatizzate, con comode poltrone in velluto. 
-                <br/>
-                Si trova in un bellissimo palazzo antico in pieno centro storico a Cagliari, facilmente raggiungibile a piedi e con i mezzi pubblici.
-                <br/>
-                E' dotato inoltre di un ampio foyer con distributore automatico e bar.
-            </p>
+            <div id='su_di_noi'>
+                <p> 
+                    Il Cinema Pasolini è un Cineclub privato, nato nel 1998 dalla passione per l'arte del suo fondatore Mario Rossi.
+                    <br/>
+                    Dispone di due ampie Sale: Kubrick e Tarantino, entrambe di 80 posti e climatizzate, con comode poltrone in velluto. 
+                    <br/>
+                    Si trova in un bellissimo palazzo antico in pieno centro storico a Cagliari, facilmente raggiungibile a piedi e con i mezzi pubblici.
+                    <br/>
+                    E' dotato inoltre di un ampio foyer con distributore automatico e bar.
+               
+                </p>
+             </div>
         </div>
         <?php include ('../inc/footer.php'); ?>
     </body>
