@@ -108,7 +108,6 @@ h1 {
 
 .image
 {
-    //display: block;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 25px;
@@ -117,7 +116,6 @@ h1 {
     width: 350px;
     height: 500px;
     position:relative;
-    //float:left;
 }
 
 #footer{
@@ -155,10 +153,26 @@ table
     text-align: justify;
 }
 
-.login{
-    margin-right: auto;
-    margin-left: auto;
-    height: 50px;
+#bottone 
+{
+    cursor: pointer;
+    font: bold 14px sans-serif;
+    color: white;
+    padding: 10px 20px;
+    border: solid 1px #0F1C71;
+    background-color: #0F1C71;   
     position:relative;
+    top:10px;
+    border-radius: 5px;
 }
+
+select, .scelta
+{
+    border-radius:5px;
+    font-size:14px;
+    padding:3px;
+    border: none;
+
+}
+
 

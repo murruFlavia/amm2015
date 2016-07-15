@@ -19,8 +19,8 @@
                 <h3>Eliminazione Prenotazioni</h3>
                 <p>Tutte le prenotazioni verranno eliminate. Proseguire?</p>
                 <form action="eliminaPrenotazioni.php" method="post">
-                    <input type="submit" name="scelta" value="SI"/>
-                    <input type="submit" name="scelta" value="NO"/>
+                    <input id='bottone' type="submit" name="scelta" value="SI"/>
+                    <input id='bottone' type="submit" name="scelta" value="NO"/>
                 </form>
                 <?php if (isset($_POST['scelta']))
                 {                   

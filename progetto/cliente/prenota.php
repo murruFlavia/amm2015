@@ -28,11 +28,11 @@ and open the template in the editor.
                 <table>
                     <tr>
                         <td><label>Nome</label></td>
-                        <td><input type="text" name="nome" id="nome" /></td>
+                        <td><input class='scelta' type="text" name="nome" id="nome" /></td>
                     </tr>
                     <tr>
                         <td><label>Cognome</label></td>
-                        <td><input type="text" name="cognome" id="cognome" /></td>
+                        <td><input class='scelta'  type="text" name="cognome" id="cognome" /></td>
                     </tr>
                     <tr>
                         <td><label>Spettacolo</label></td>
@@ -72,10 +72,11 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td><label>Numero Posti</label></td>
-                        <td><input type="number" min=1 max=80 name="numPosti" id="numPosti" /></td>
+                        <td><input class='scelta' type="number" min=1 max=80 name="numPosti" id="numPosti" /></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" name="prenota" value="Prenota" /></td>
+                        <td></td>
+                        <td><input id='bottone' type="submit" name="prenota" value="Prenota" /></td>
                     </tr>
                 </table>
             </form>

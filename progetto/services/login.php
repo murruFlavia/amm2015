@@ -25,11 +25,11 @@ and open the template in the editor.
             <form action="login.php" method="post">
                 <input type="hidden" name="sessionid"/>
                 <label for="utente">Nome Utente</label>
-                <input type="text" name="utente" id="utente"/>
+                <input class='scelta' type="text" name="utente" id="utente"/>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password"/> 
+                <input class='scelta' type="password" name="password" id="password"/> 
                 <br/>
-                <input type="submit" name=Login value="Login"/>
+                <input id='bottone' type="submit" name=Login value="Login"/>
             </form>            
             <?php 
             if (isset($_POST['Login']))
