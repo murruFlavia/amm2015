@@ -8,17 +8,10 @@ and open the template in the editor.
     Author     : amm
 */
 
-html, body, #container
-{ 
-    min-height:100%; 
-    width:100%;
-    height:100%;
-}
 
-html>body, html>body #container
-{
-    height:auto;
-}
+
+* { margin:0; padding:0;}
+html, body { height: 100%; }
 
 body {
     background-color: #D7EBE9;
@@ -132,6 +125,7 @@ h1 {
     display:block;
     height: 50px;
     clear:both;
+    
 }
 
 table
@@ -163,6 +157,7 @@ table
     background-color: #0F1C71;   
     position:relative;
     top:10px;
+    bottom:10px;
     border-radius: 5px;
 }
 
