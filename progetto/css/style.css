@@ -136,7 +136,7 @@ h1 {
     clear:both;
 }
 
-table, .login
+table
 {
     
     margin-right: auto;
@@ -153,5 +153,12 @@ table, .login
 #su_di_noi
 {
     text-align: justify;
+}
+
+.login{
+    margin-right: auto;
+    margin-left: auto;
+    height: 50px;
+    position:relative;
 }
 
