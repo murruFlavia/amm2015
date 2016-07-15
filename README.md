@@ -9,7 +9,8 @@ Sono stati rispettati i seguenti requisiti:
 Utilizzo di HTML e CSS
 Utilizzo di PHP e MySQL
 Due ruoli: admin e cliente
-Una transazione nella funzione cancellaPrenotazioni (admin/eliminaPrenotazioni.php)
+Una transazione nella funzione cancellaPrenotazioni (admin/eliminaPrenotazioni.php).
+
 Credenziali
 
 Si accede ai due ruoli effettuando il login con le seguenti credenziali (in caso di credenziali errate viene visualizzato un apposito messaggio di errore):
