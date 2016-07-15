@@ -2,7 +2,7 @@
 
 Il progetto in questione rappresenta il sito di un cinema.
 
-**Requisiti**
+Requisiti
 
 Sono stati rispettati i seguenti requisiti:
 
