@@ -23,6 +23,7 @@ and open the template in the editor.
         
         <div class="box"> 
             <h2> Prenotazione </h2>
+            <p>NB: Il pagamento avverrà alla cassa al momento del ritiro dei biglietti. <br/> Munirsi di un documento di identità.</p>
             <form action="prenota.php" method="post" id="prenota">
                 <table>
                     <tr>
@@ -147,7 +148,7 @@ and open the template in the editor.
 </html>
 
 <?php
-    function verificaPosti($sala, $data, $orario, $num_posti)
+    function verificaPosti($sala, $data, $orario, $num_posti) //funzione che verifica se i posti liberi sono sufficienti
     {
         $query = "SELECT SUM(n_prenotati) from Prenotazioni WHERE sala='$sala' AND data='$data' AND orario='$orario'";
         $result = mysql_query($query);

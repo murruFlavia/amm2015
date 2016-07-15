@@ -5,33 +5,13 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-     <?php
-        session_start();
-        if (isset($_POST['Login']))
-        {
-            $_SESSION['loggedIn'] = false;
-            if ( isset($_POST["utente"]) && isset($_POST["password"]))	
-            {	
-                if($_POST["utente"]=="admin" && $_POST["password"]=="flavia")
-                {
-                    $_SESSION['loggedIn']= true;
-                    $_SESSION["level"]="admin";
-                    header('Location: home.php');
-                }
-                else if($_POST["utente"]=="cliente" && $_POST["password"]=="flavia")
-                {                    
-                    $_SESSION['loggedIn']= true;
-                    $_SESSION["level"]="cliente";
-                    header('Location: home.php');
-                }                
-            }
-        }
-    ?>
+     
     <head>
         <meta charset="UTF-8">
         <title>Cinema Pasolini - Login</title>
         <?php
             include('../inc/head.php');
+            session_start();
          ?>
     </head>
     
@@ -51,8 +31,32 @@ and open the template in the editor.
                 <br/>
                 <input type="submit" name=Login value="Login"/>
             </form>
+            <?php 
+            if (isset($_POST['Login']))
+            {
+                $_SESSION['loggedIn'] = false;
+                if ( isset($_POST["utente"]) && isset($_POST["password"]))	
+                {	
+                    if($_POST["utente"]=="admin" && $_POST["password"]=="flavia")
+                    {
+                        $_SESSION['loggedIn']= true;
+                        $_SESSION["level"]="admin";
+                        header('Location: home.php');
+                    }
+                    else if($_POST["utente"]=="cliente" && $_POST["password"]=="flavia")
+                    {                    
+                        $_SESSION['loggedIn']= true;
+                        $_SESSION["level"]="cliente";
+                        header('Location: home.php');
+                    }
+                    else
+                        echo "<div class=\"messaggi_errore\"><strong>Credenziali errate</strong><br> </div>";
+                }
+            }
+        ?>
         </div>
         <?php include ('../inc/footer.php'); ?>
+        
     </body>
     
    
