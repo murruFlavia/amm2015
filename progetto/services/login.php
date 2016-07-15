@@ -22,15 +22,17 @@ and open the template in the editor.
         ?>
         <div class='box'>
             <h2>Login</h2>
-            <form action="login.php" method="post">
-                <input type="hidden" name="sessionid"/>
-                <label for="utente">Nome Utente</label>
-                <input type="text" name="utente" id="utente"/>
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password"/> 
-                <br/>
-                <input type="submit" name=Login value="Login"/>
-            </form>
+            <div id='login'>
+                <form action="login.php" method="post">
+                    <input type="hidden" name="sessionid"/>
+                    <label for="utente">Nome Utente</label>
+                    <input type="text" name="utente" id="utente"/>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password"/> 
+                    <br/>
+                    <input type="submit" name=Login value="Login"/>
+                </form>
+            </div>
             <?php 
             if (isset($_POST['Login']))
             {
