@@ -10,8 +10,7 @@ and open the template in the editor.
 
 
 
-* { margin:0; padding:0;}
-html, body { height: 100%; }
+
 
 body {
     background-color: #D7EBE9;
@@ -140,6 +139,8 @@ table
 .messaggi_errore
 {
     color:red;
+    position:relative;
+    top:15px;
 }
 
 #su_di_noi
