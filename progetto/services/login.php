@@ -9,8 +9,10 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Cinema Pasolini - Login</title>
+        
         <?php
             include('../inc/head.php');
+            
             session_start();
          ?>
     </head>
@@ -30,7 +32,8 @@ and open the template in the editor.
                 <input class='scelta' type="password" name="password" id="password"/> 
                 <br/>
                 <input id='bottone' type="submit" name=Login value="Login"/>
-            </form>            
+            </form>
+            <div id="errore"></div>
             <?php 
             if (isset($_POST['Login']))
             {
@@ -49,15 +52,15 @@ and open the template in the editor.
                         $_SESSION["level"]="cliente";
                         header('Location: home.php');
                     }
-                    else
+                    else 
                         echo "<div class=\"messaggi_errore\"><strong>Credenziali errate</strong><br> </div>";
                 }
             }
         ?>
         </div>
         <?php include ('../inc/footer.php'); ?>
-        
-    </body>
-    
    
+    </body>
+ 
 </html>
+

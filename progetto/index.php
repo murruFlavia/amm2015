@@ -45,18 +45,22 @@ and open the template in the editor.
                 </ul>
             </li>
         </ul>
-        <p>Per passare da un ruolo all'altro si può effettuare il logout e successivamente il login.</p>
+        <p>Per passare da un ruolo all'altro si pu&ograve; effettuare il logout e successivamente il login.</p>
         
-        <h3>Funzionalità</h3>
+        <h3>Funzionalit&agrave;</h3>
         <ul>
             <li>
                 <b>Cliente</b><br/>
-                Il cliente può effettuare una o più prenotazioni per gli spettacoli presenti, compilando l'apposito form nella sezione Prenota.<br/> 
+                Il cliente pu&ograve; effettuare una o pi&ugrave; prenotazioni per gli spettacoli presenti, compilando l'apposito form nella sezione Prenota.<br/> 
                 In caso di campi mancanti o di posti insufficienti, verranno visualizzati appositi messaggi di errore.
             </li>
             <li>
                 <b>Admin</b><br/>
-                L'admin può invece visualizzare le prenotazioni effettuate e/o cancellarle, tramite le apposite sezioni Vedi Prenotazioni e Elimina Prenotazioni
+                L'admin pu&ograve; invece visualizzare le prenotazioni effettuate e/o cancellarle, tramite le apposite sezioni Vedi Prenotazioni e Elimina Prenotazioni
+            </li>
+            <li>
+                <b>Utente non loggato</b><br/>
+                L'utente non loggato pu&ograve; accedere alla home cliccando sul titolo "Cinema Pasolini" e alle sezioni Tariffe, Su di Noi e In Sala.
             </li>
         </ul>
             

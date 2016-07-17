@@ -17,7 +17,7 @@
         <div id="content">
             <div class=box>
                 <h2>News</h2>
-                <p>Il cinema rimarrà chiuso per ferie dal 12 al 17 Agosto compresi.</p>
+                <p>Il cinema rimarr&agrave; chiuso per ferie dal 12 al 17 Agosto compresi.</p>
             </div>
         </div>
         <?php include ('../inc/footer.php'); ?>
