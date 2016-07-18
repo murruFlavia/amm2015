@@ -5,7 +5,6 @@
         <li><a href="../services/suDiNoi.php" ><strong>Su di noi</strong></a></li>
 	<li><a href="../services/inSala.php"><strong>In Sala</strong></a></li>
 	<li><a href="../services/tariffe.php"><strong>Tariffe</strong></a></li>
-	<!--<li><a href="../services/contattaci.php"><strong>Contattaci</strong></a></li>-->
         <?php if ( isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']==true) : ?>
             <?php if ( $_SESSION['level']=='cliente') : ?>
                 <li><a href="../cliente/prenota.php"><strong>Prenota</strong></a></li>
